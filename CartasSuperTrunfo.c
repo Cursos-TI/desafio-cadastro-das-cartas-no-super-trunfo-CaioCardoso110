@@ -10,10 +10,8 @@ int main() {
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
 
     char codigo[30], cidade[30];
-    float populacao, area;
-    int pib, turismo;
-    float densidade = populacao / area;
-    float percapita = (float) pib / populacao;
+    float area, pib, densidade, percapita, populacao;
+    int turismo;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -27,11 +25,11 @@ int main() {
     printf("Digite o nome da cidade: ");
     scanf(" %[^\n]s", &cidade);
 
-    printf("Digite a população estimada: ");
-    scanf("%.4f", &populacao);
+    printf("Digite a população estimada (em milhões): ");
+    scanf("%d", &populacao);
 
     printf("Digite a área: ");
-    scanf("%.f", &area);
+    scanf("%f", &area);
 
     printf("Digite o PIB da cidade: ");
     scanf("%d", &pib);
@@ -39,6 +37,10 @@ int main() {
     printf("Digite o numero de pontos turísticos: ");
     scanf("%d", &turismo);
 
+    // Cálculo da densidade populacional e do PIB per capita
+
+    densidade = (float) populacao / area;
+    percapita = (float) pib / populacao;
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -47,12 +49,12 @@ int main() {
     printf(" DADOS DA CARTA DO SUPER TRUNFO \n");
     printf("Código: %s \n", codigo);
     printf("Cidade: %s \n", cidade);
-    printf("População (Milhões): %.1f \n", populacao);
-    printf("Área (km²): %.1f \n", area);
+    printf("População: %f milhões\n", populacao);
+    printf("Área (km²): %f \n", area);
     printf("PIB (Bilhões): %d \n", pib);
     printf("Número de pontos turísticos: %d \n", turismo);
-    printf("A densidade populacional é de: %.4f\n", densidade);
-    printf("O PIB per Capita é de: %.1f\n", percapita);
+    printf("A densidade populacional é de: %.3f\n", densidade);
+    printf("O PIB per Capita é de R$%.1f\n reais", percapita);
 
     return 0;
 }
