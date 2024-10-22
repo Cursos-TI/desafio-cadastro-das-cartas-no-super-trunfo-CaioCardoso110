@@ -10,7 +10,9 @@ int main() {
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
 
     char codigo[30], cidade[30];
-    float area, pib, densidade, percapita, populacao;
+    float area, densidade;
+    long long int pib, percapita;
+    long long int populacao;
     int turismo;
 
     // Cadastro das Cartas:
@@ -26,21 +28,21 @@ int main() {
     scanf(" %[^\n]s", &cidade);
 
     printf("Digite a população estimada (em milhões): ");
-    scanf("%f", &populacao);
+    scanf(" %lld", &populacao);
 
     printf("Digite a área: ");
     scanf("%f", &area);
 
     printf("Digite o PIB da cidade: ");
-    scanf("%f", &pib);
+    scanf("%lld", &pib);
 
     printf("Digite o numero de pontos turísticos: ");
     scanf("%d", &turismo);
 
     // Cálculo da densidade populacional e do PIB per capita
 
-    densidade = (float) (populacao * 1000) / area;
-    percapita = (pib / populacao) * 1000;
+    densidade = populacao / area;
+    percapita = (pib / populacao;
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -49,12 +51,12 @@ int main() {
     printf(" DADOS DA CARTA DO SUPER TRUNFO \n");
     printf("Código: %s \n", codigo);
     printf("Cidade: %s \n", cidade);
-    printf("População: %.2f milhões\n", populacao);
+    printf("População: %lld milhões\n", populacao);
     printf("Área (km²): %.1f \n", area);
-    printf("PIB (Bilhões): %.3f \n", pib);
+    printf("PIB (Milhões): %lld \n", pib);
     printf("Número de pontos turísticos: %d \n", turismo);
-    printf("A densidade populacional é de: %.3f\n", densidade);
-    printf("O PIB per Capita é de R$%.2f\n reais", percapita);
+    printf("A densidade populacional é de: %.1f\n", densidade);
+    printf("O PIB per Capita é de R$%lld\n reais", percapita);
 
     return 0;
 }
