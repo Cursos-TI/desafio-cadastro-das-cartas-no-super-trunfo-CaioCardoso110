@@ -42,7 +42,7 @@ int main() {
     // Cálculo da densidade populacional e do PIB per capita
 
     densidade = populacao / area;
-    percapita = (pib / populacao;
+    percapita = pib / populacao;
     
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
