@@ -86,7 +86,7 @@ int main() {
         printf("PIB (Milhões): %lld \n", cartas[i].pib);
         printf("Número de pontos turísticos: %d \n", cartas[i].turismo);
         printf("A densidade populacional é de: %.1f\n", cartas[i].densidade);
-        printf("O PIB per Capita é de R$%lld mil reais", cartas[i].percapita);
+        printf("O PIB per Capita é de R$%lld mil reais\n\n", cartas[i].percapita);
     }
 
     return 0;
